@@ -28,24 +28,24 @@ pair = [road1, road2]
 
 enemies = []
 
+
 def newEnemy():
     val = random.uniform(-5, 5)
-    if val == 0:
-        val = 2
     new = duplicate(
         car,
         texture='assets\enemy',
         x=2*val,
         y=15,
         color=color.random_color(),
-        # rotation_z = 90 if val < 90 else -90
-        rotation_z=90 if val > 0
-        else -90
+        rotation_z= -90 if val > 0
+        else 90
     )
     enemies.append(new)
     invoke(newEnemy, delay=0.5)
 
+
 newEnemy()
+
 
 def update():
     car.x += held_keys['d']*10*time.dt
@@ -56,7 +56,7 @@ def update():
             road.y += 30
     for enemy in enemies:
         if enemy.x < 0:
-            enemy.y -= 20*time.dt
+            enemy.y -= 25*time.dt
         else:
             enemy.y -= 15*time.dt
         if enemy.y < -15:
@@ -64,5 +64,4 @@ def update():
             destroy(enemy)
         if car.intersects().hit:
             car.shake()
-
 app.run()
