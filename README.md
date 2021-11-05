@@ -3,4 +3,5 @@
 Car game built with Python and <i>Ursina Engine</i>
 
 
-![gif-car](https://user-images.githubusercontent.com/52840354/140540421-26be2068-36ac-45d1-b10d-1928a3fb4df0.gif)
+
+![car-gif](https://user-images.githubusercontent.com/52840354/140554980-bd5602c9-8ce8-46b5-8fa1-a0cd45e1be74.gif)
